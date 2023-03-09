@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "FORNECEDOR";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Formulário de cadastro de fornecedor.</p>
+
+<br>
+
+<form action="cadastrar_empresa.css" method="post" class="cadastro-empresa">
+    <div class="campo">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <br>
+
+    <div class="campo">
+        <label for="cpfcnpj">CPF/CNPJ:</label>
+        <input type="text" id="cpfcnpj" name="cpfcnpj" required>
+        <label for="checkbox-field">&nbsp CPF:</label>
+        <input type="checkbox" id="checkbox-field" name="show_id">
+        <label for="opcao">(Marque a caixa caso você seja pessoa física)</label>
+    </div>
+
+    <br>
+
+    <div id="rg-field">
+        <label for="rg-input">RG:</label>
+        <input type="text" id="rg-input" name="rg">
+    </div>
+
+    <br>
+
+    <div id="nascimento-field">
+        <label for="nascimento-input">Data de nascimento:</label>
+        <input type="date" id="nascimento-input" name="nascimento">
+    </div>
+
+    <script>
+        const checkbox = document.getElementById('checkbox-field');
+        const RgField = document.getElementById('rg-field');
+        const NascimentoField = document.getElementById('nascimento-field');
+
+        checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+                RgField.style.display = 'block';
+                NascimentoField.style.display = 'block';
+            }
+            else {
+                RgField.style.display = 'none';
+                NascimentoField.style.display = 'none';
+            }
+        });
+    </script>
+
+    <br>
+
+    <div class="campo">
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required>
+    </div>
+
+    <br>
+
+    <div class="campo">
+        <label for="empresa">CNPJ Cliente:</label>
+        <input type="text" id="empresa" name="empresa" required>
+        <label for="empresa">(CNPJ da empresa na qual fornece):</label>
+    </div>
+
+    <br>
+
+    <button type="submit">Cadastrar</button>
+</form>

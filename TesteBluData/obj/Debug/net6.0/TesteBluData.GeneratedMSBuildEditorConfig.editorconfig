@@ -16,12 +16,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Dev\TesteBluData\TesteBluData
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Dev/TesteBluData/TesteBluData/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Dev/TesteBluData/TesteBluData/Views/Home/CadastroEmpresa.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryb0VtcHJlc2EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Dev/TesteBluData/TesteBluData/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Dev/TesteBluData/TesteBluData/Views/Home/CadastroFornecedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryb0Zvcm5lY2Vkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Dev/TesteBluData/TesteBluData/Views/Home/ConsultaFornecedor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb25zdWx0YUZvcm5lY2Vkb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Dev/TesteBluData/TesteBluData/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Dev/TesteBluData/TesteBluData/Views/Shared/Error.cshtml]

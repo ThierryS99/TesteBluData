@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
+      "Id": "C:\\Dev\\TesteBluData\\TesteBluData\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-flatly.css"
+    },
+    {
       "Id": "C:\\Dev\\TesteBluData\\TesteBluData\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },

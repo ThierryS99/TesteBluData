@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "EMPRESA";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Formulário de cadastro de empresa.</p>
+
+<br>
+
+<form action="cadastrar_empresa.css" method="post" class="cadastro-empresa">
+    <div class="campo">
+        <label for="empresa">Empresa:</label>
+        <input type="text" id="empresa" name="empresa" required>
+    </div>
+
+    <br>
+
+    <div class="campo">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+    </div>
+
+    <br>
+
+    <div class="campo">
+        <label for="cpfcnpj">CPF/CNPJ:</label>
+        <input type="text" id="cpfcnpj" name="cpfcnpj" required>
+    </div>
+
+    <br>
+
+    <div class="campo">
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required>
+    </div>
+
+    <br>
+
+    <button type="submit">Cadastrar</button>
+</form>
+
+
+
+

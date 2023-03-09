@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "CONSULTA DE FORNECEDOR";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Consulta de fornecedores por empresa.</p>
+
+<br>
+
+<head>
+	<title>Tabela com filtro</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			text-align: center;
+		}
+
+		th, td {
+			padding: 8px;
+			border: 1px solid black;
+		}
+
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+
+		input[type=text] {
+			padding: 5px;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h2>Tabela com filtro</h2>
+	<input type="text" id="inputFiltro" onkeyup="filtrar()" placeholder="Filtrar...">
+	<table id="tabela">
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Nome</th>
+				<th>Sobrenome</th>
+				<th>Idade</th>
+				<th>Endereço</th>
+				<th>Cidade</th>
+				<th>País</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>
+				<td>João</td>
+				<td>Silva</td>
+				<td>30</td>
+				<td>Rua A, 123</td>
+				<td>São Paulo</td>
+				<td>Brasil</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Maria</td>
+				<td>Santos</td>
+				<td>25</td>
+				<td>Rua B, 456</td>
+				<td>Rio de Janeiro</td>
+				<td>Brasil</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>John</td>
+				<td>Doe</td>
+				<td>35</td>
+				<td>Main St, 789</td>
+				<td>New York</td>
+				<td>Estados Unidos</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Jane</td>
+				<td>Doe</td>
+				<td>28</td>
+				<td>Wall St, 1010</td>
+				<td>New York</td>
+				<td>Estados Unidos</td>
+			</tr>
+		</tbody>
+	</table>
+	<script>
+		function filtrar() {
+			var input, filtro, tabela, linhas, celula, i, j;
+			input = document.getElementById("inputFiltro");
+			filtro = input.value.toUpperCase();
+			tabela = document.getElementById("tabela");
+			linhas = tabela.getElementsByTagName("tr");
+			for (i = 0; i < linhas.length; i++) {
+				celula = linhas[i].getElementsByTagName("td");
+				for (j = 0; j < celula.length; j++) {
+					if (celula[j].innerHTML.toUpperCase().indexOf(filtro) > -1) {
+						linhas[i].style.display = "";
+						break;
+					} else {
+						linhas[i].style.display = "none";
+					}
+				}
+			}
+		}
+	</script>
+</body>

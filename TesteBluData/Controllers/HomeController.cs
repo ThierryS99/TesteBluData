@@ -18,7 +18,17 @@ namespace TesteBluData.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult CadastroFornecedor()
+        {
+            return View();
+        }
+
+        public IActionResult CadastroEmpresa()
+        {
+            return View();
+        }
+
+        public IActionResult ConsultaFornecedor()
         {
             return View();
         }
