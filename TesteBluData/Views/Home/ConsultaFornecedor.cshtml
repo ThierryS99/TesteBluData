@@ -2,8 +2,7 @@
 @{
     ViewData["Title"] = "CONSULTA DE FORNECEDOR";
 }
-<h1>@ViewData["Title"]</h1>
-<p>Consulta de fornecedores por empresa.</p>
+
 
 <br>
 <head>
@@ -38,6 +37,7 @@
     <table id="tabela">
         <thead>
             <tr>
+                <th scope="col">ID</th>
                 <th scope="col">NOME</th>
                 <th scope="col">CPF/CNPJ</th>
                 <th scope="col">TELEFONE</th>
@@ -50,20 +50,20 @@
         <tbody>
             @if (Model != null && Model.Any())
             {
-                @foreach (Fornecedor fornecedor in Model)
+                foreach (Fornecedor fornecedor in Model)
                 {
                     <tr>
-                        <td>@fornecedor.Nome</td>
-                        <td>@fornecedor.CadastroId</td>
-                        <td>@fornecedor.Telefone</td>
-                        <td>@fornecedor.Rg</td>
-                        <td>@fornecedor.Nascimento</td>
-                        <td>@fornecedor.Empresa</td>
-                        <td>@fornecedor.DataCadastro</td>
+                        <th scope="row">@fornecedor.Id</th>
+                        <td>@fornecedor.Nome)</td>
+                        <td>@fornecedor.CadastroId)</td>
+                        <td>@fornecedor.Telefone)</td>
+                        <td>@fornecedor.Rg)</td>
+                        <td>@fornecedor.Nascimento)</td>
+                        <td>@fornecedor.Empresa)</td>
+                        <td>@fornecedor.DataCadastro)</td>
                     </tr>
                 }
             }
-
         </tbody>
     </table>
     <script>

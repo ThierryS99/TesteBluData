@@ -8,18 +8,26 @@ namespace TesteBluData.Controllers
     {
 		private readonly IFornecedorRepositorio _fornecedorRepositorio;
 
+		
 		public FornecedorController(IFornecedorRepositorio fornecedorRepositorio)
 		{
 			_fornecedorRepositorio = fornecedorRepositorio;
 		}
-
-		public IActionResult Index()
+		
+        public IActionResult Index()
         {
             List<Fornecedor> fornecedor = _fornecedorRepositorio.BuscarTodos();
             return View(fornecedor);
         }
 
         public IActionResult ConsultaFornecedor()
+        {
+            List<Fornecedor> fornecedor = _fornecedorRepositorio.BuscarTodos();
+            return View(fornecedor);
+        }
+        
+
+        public IActionResult Home()
         {
             List<Fornecedor> fornecedor = _fornecedorRepositorio.BuscarTodos();
             return View(fornecedor);
@@ -46,5 +54,5 @@ namespace TesteBluData.Controllers
 			_fornecedorRepositorio.Adicionar(fornecedor);
 			return RedirectToAction("Index");
 		}
-	}
+    }
 }

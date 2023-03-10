@@ -13,7 +13,8 @@ namespace TesteBluData.Models
 		public string? Rg { get; set; }
 		public DateTime? Nascimento { get; set; }
 		public string? Empresa { get; set; }
-		public DateTime? DataCadastro { get; set; }
+
+		public DateTime? DataCadastro { get; set; } 
 
 		public Fornecedor() { }
 

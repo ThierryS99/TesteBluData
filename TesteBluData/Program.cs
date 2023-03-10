@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using TesteBluData.Data;
 using TesteBluData.Repos;
+
 
 var builder = WebApplication.CreateBuilder(args);
 

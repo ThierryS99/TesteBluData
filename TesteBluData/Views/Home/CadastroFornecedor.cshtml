@@ -72,5 +72,19 @@
 
     <br>
 
+    <input type="hidden" id="timestamp" name="timestamp">
+
     <button type="submit">Cadastrar</button>
+
+    <script>
+            var now = new Date();
+            var timestamp = now.getDate() + '-' + (now.getMonth() + 1) + '-' + now.getFullYear() + ' ' + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+
+           
+
+        document.getElementById("timestamp").value = timestamp;
+    </script>
+
+        
+    
 </form>
