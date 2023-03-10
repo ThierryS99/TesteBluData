@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Fornecedor
+@{
     ViewData["Title"] = "FORNECEDOR";
 }
 <h1>@ViewData["Title"]</h1>
@@ -7,17 +8,17 @@
 
 <br>
 
-<form action="cadastrar_empresa.css" method="post" class="cadastro-empresa">
+<form asp-controller="Fornecedor" asp-action="Cadastrar" method="post">
     <div class="campo">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input type="text" asp-for="Nome" id="nome" name="nome" required>
     </div>
 
     <br>
 
     <div class="campo">
-        <label for="cpfcnpj">CPF/CNPJ:</label>
-        <input type="text" id="cpfcnpj" name="cpfcnpj" required>
+        <label for="cadastroid">CPF/CNPJ:</label>
+        <input type="text" asp-for="CadastroId" id="cadastroid" name="cadastroid" required>
         <label for="checkbox-field">&nbsp CPF:</label>
         <input type="checkbox" id="checkbox-field" name="show_id">
         <label for="opcao">(Marque a caixa caso você seja pessoa física)</label>
@@ -26,15 +27,15 @@
     <br>
 
     <div id="rg-field">
-        <label for="rg-input">RG:</label>
-        <input type="text" id="rg-input" name="rg">
+        <label for="rg">RG:</label>
+        <input type="text" asp-for="Rg" id="rg" name="rg">
     </div>
 
     <br>
 
     <div id="nascimento-field">
-        <label for="nascimento-input">Data de nascimento:</label>
-        <input type="date" id="nascimento-input" name="nascimento">
+        <label for="nascimento">Data de nascimento:</label>
+        <input type="date" asp-for="Nascimento" id="nascimento" name="nascimento">
     </div>
 
     <script>
@@ -58,14 +59,14 @@
 
     <div class="campo">
         <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" required>
+        <input type="text" asp-for="Telefone" id="telefone" name="telefone" required>
     </div>
 
     <br>
 
     <div class="campo">
         <label for="empresa">CNPJ Cliente:</label>
-        <input type="text" id="empresa" name="empresa" required>
+        <input type="text" asp-for="Empresa" id="empresa" name="empresa" required>
         <label for="empresa">(CNPJ da empresa na qual fornece):</label>
     </div>
 

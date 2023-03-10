@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Empresa
+@{
     ViewData["Title"] = "EMPRESA";
 }
 <h1>@ViewData["Title"]</h1>
@@ -7,38 +8,27 @@
 
 <br>
 
-<form action="cadastrar_empresa.css" method="post" class="cadastro-empresa">
+<form asp-controller="Empresa" asp-action="Cadastrar" method="post">
     <div class="campo">
-        <label for="empresa">Empresa:</label>
-        <input type="text" id="empresa" name="empresa" required>
+        <label for="uf">UF:</label>
+        <input type="text" asp-for="Uf" id="uf" name="uf" required>
     </div>
 
     <br>
 
     <div class="campo">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <label for="nomefantasia">Nome Fantasia:</label>
+        <input type="text" asp-for="NomeFantasia" id="nomefantasia" name="nomefantasia" required>
     </div>
 
     <br>
 
     <div class="campo">
-        <label for="cpfcnpj">CPF/CNPJ:</label>
-        <input type="text" id="cpfcnpj" name="cpfcnpj" required>
-    </div>
-
-    <br>
-
-    <div class="campo">
-        <label for="telefone">Telefone:</label>
-        <input type="tel" id="telefone" name="telefone" required>
+        <label for="cnpj">CNPJ:</label>
+        <input type="text" asp-for="Cnpj" id="cnpj" name="cnpj" required>
     </div>
 
     <br>
 
     <button type="submit">Cadastrar</button>
 </form>
-
-
-
-

@@ -1,12 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TesteBluData.Data;
+using TesteBluData.Repos;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddEntityFrameworkSqlServer().AddDbContext<BancoContext>(o => o.UseSqlServer(builder.Configuration.GetConnectionString("Database")));
+builder.Services.AddScoped<IEmpresaRepositorio, EmpresaRepositorio>();
+builder.Services.AddScoped<IFornecedorRepositorio, FornecedorRepositorio>();
 
 var app = builder.Build();
 

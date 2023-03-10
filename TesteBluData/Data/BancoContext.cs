@@ -11,6 +11,6 @@ namespace TesteBluData.Data
 		}
 
 		public DbSet<Empresa> Empresa { get; set; }
-		public DbSet<Fornecedor> FornecedorPf { get; set; }
+		public DbSet<Fornecedor> Fornecedor { get; set; }
 	}
 }

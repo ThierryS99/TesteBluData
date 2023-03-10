@@ -1,10 +1,14 @@
-﻿namespace TesteBluData.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TesteBluData.Models
 {
     public class Empresa
     {
-        public string Uf { get; set; }
-        public string NomeFantasia { get; set; }
-        public string Cnpj { get; set; }
+        [Key]
+        public int Id { get; set; }
+		public string? Uf { get; set; }
+        public string? NomeFantasia { get; set; }
+		public string? Cnpj { get; set; }
 
         public Empresa() { }
 

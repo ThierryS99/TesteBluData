@@ -1,92 +1,89 @@
-﻿@{
+﻿@model List<Fornecedor>
+@{
     ViewData["Title"] = "CONSULTA DE FORNECEDOR";
 }
 <h1>@ViewData["Title"]</h1>
-
 <p>Consulta de fornecedores por empresa.</p>
 
 <br>
-
 <head>
-	<title>Tabela com filtro</title>
-	<style>
-		table {
-			border-collapse: collapse;
-			width: 100%;
-			text-align: center;
-		}
+    <title>Tabela com filtro</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            text-align: center;
+        }
 
-		th, td {
-			padding: 8px;
-			border: 1px solid black;
-		}
+        th, td {
+            padding: 8px;
+            border: 1px solid black;
+        }
 
-		tr:nth-child(even) {
-			background-color: #f2f2f2;
-		}
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
 
-		input[type=text] {
-			padding: 5px;
-			border: 1px solid #ccc;
-			border-radius: 4px;
-			margin-bottom: 10px;
-		}
-	</style>
+        input[type=text] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
 <body>
-	<h2>Digite abaixo o que deseja encontrar:</h2>
-	<input type="text" id="inputFiltro" onkeyup="filtrar()" placeholder="Filtrar...">
-	<table id="tabela">
-		<thead>
-			<tr>
-				<th>NOME</th>
-				<th>CPF/CNPJ</th>
-				<th>TELEFONE</th>
-				<th>RG</th>
-				<th>DATA DE NASCIMENTO</th>
-				<th>CLIENTE</th>
-				<th>DATA/HORA CADASTRO</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>José Silva</td>
-				<td>166.452.346-97</td>
-				<td>(49) 985463256</td>
-				<td>6.498.326</td>
-				<td>15/06/1983</td>
-				<td>Bludata</td>
-				<td>08/07/2023 23:15</td>
-			</tr>
-			<tr>
-				<td>TS Embalagens</td>
-				<td>1231565874562</td>
-				<td>(47 984021155)</td>
-				<td></td>
-				<td></td>
-				<td>Bludata</td>
-				<td>08/07/2023 23:16</td>
-			</tr>
-		</tbody>
-	</table>
-	<script>
-		function filtrar() {
-			var input, filtro, tabela, linhas, celula, i, j;
-			input = document.getElementById("inputFiltro");
-			filtro = input.value.toUpperCase();
-			tabela = document.getElementById("tabela");
-			linhas = tabela.getElementsByTagName("tr");
-			for (i = 0; i < linhas.length; i++) {
-				celula = linhas[i].getElementsByTagName("td");
-				for (j = 0; j < celula.length; j++) {
-					if (celula[j].innerHTML.toUpperCase().indexOf(filtro) > -1) {
-						linhas[i].style.display = "";
-						break;
-					} else {
-						linhas[i].style.display = "none";
-					}
-				}
-			}
-		}
-	</script>
+    <h2>Digite abaixo o que deseja encontrar:</h2>
+    <input type="text" id="inputFiltro" onkeyup="filtrar()" placeholder="Filtrar...">
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th scope="col">NOME</th>
+                <th scope="col">CPF/CNPJ</th>
+                <th scope="col">TELEFONE</th>
+                <th scope="col">RG</th>
+                <th scope="col">DATA DE NASCIMENTO</th>
+                <th scope="col">EMPRESA CLIENTE</th>
+                <th scope="col">DATA DE CADASTRO</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (Fornecedor fornecedor in Model)
+                {
+                    <tr>
+                        <td>@fornecedor.Nome</td>
+                        <td>@fornecedor.CadastroId</td>
+                        <td>@fornecedor.Telefone</td>
+                        <td>@fornecedor.Rg</td>
+                        <td>@fornecedor.Nascimento</td>
+                        <td>@fornecedor.Empresa</td>
+                        <td>@fornecedor.DataCadastro</td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+    <script>
+        function filtrar() {
+            var input, filtro, tabela, linhas, celula, i, j;
+            input = document.getElementById("inputFiltro");
+            filtro = input.value.toUpperCase();
+            tabela = document.getElementById("tabela");
+            linhas = tabela.getElementsByTagName("tr");
+            for (i = 0; i < linhas.length; i++) {
+                celula = linhas[i].getElementsByTagName("td");
+                for (j = 0; j < celula.length; j++) {
+                    if (celula[j].innerHTML.toUpperCase().indexOf(filtro) > -1) {
+                        linhas[i].style.display = "";
+                        break;
+                    } else {
+                        linhas[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 </body>

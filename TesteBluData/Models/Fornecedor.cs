@@ -1,16 +1,19 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TesteBluData.Models
 {
 	public class Fornecedor
 	{
-		public string Nome { get; set; }
-		public string CadastroId { get; set; } // CPF OU CNPJ   
-		public string Telefone { get; set; }
-		public string Rg { get; set; }
-		public DateTime Nascimento { get; set; }
-		public string Empresa { get; set; }
-		public DateTime DataCadastro { get; set; }
+		[Key]
+		public int Id { get; set; }
+		public string? Nome { get; set; }
+		public string? CadastroId { get; set; } // CPF OU CNPJ   
+		public string? Telefone { get; set; }
+		public string? Rg { get; set; }
+		public DateTime? Nascimento { get; set; }
+		public string? Empresa { get; set; }
+		public DateTime? DataCadastro { get; set; }
 
 		public Fornecedor() { }
 
