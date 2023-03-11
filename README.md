@@ -1,4 +1,4 @@
-# TesteBluData
+# Teste Bludata
 
 Esse sistema foi desenvolvido de acordo com o desafio da Bludata Softwares para a vaga de programador C#.
 
