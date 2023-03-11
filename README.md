@@ -23,22 +23,22 @@ TECNOLOGIAS E FERRAMENTAS UTILIZADAS:
 INTERFACES:
 
 Tela inicial. Toda vez que iniciado ou que um fornecedor ou empresa é cadastrado retorna para essa view.
-![image](https://user-images.githubusercontent.com/107226804/224433738-5a8bb67e-7f44-4557-b263-f2da85343f60.png)
+![image](https://user-images.githubusercontent.com/107226804/224453472-d7a84a06-fa38-416d-8111-9b8011aefcb5.png)
 
 
 
 Tela de cadastro da Empresa.
-![image](https://user-images.githubusercontent.com/107226804/224434836-874be059-1cbd-45ca-88c0-a33f51a1a48d.png)
+![image](https://user-images.githubusercontent.com/107226804/224453499-598b4612-dac5-4731-bf64-f23f30e81324.png)
 
 
 
-Tela de cadastro do Fornecedor.
-![image](https://user-images.githubusercontent.com/107226804/224434979-663be380-3a67-4f56-9707-9d103a9c55b2.png)
+Tela de cadastro do Fornecedor. Nessa tela, tem um bug na qual a tela inicia com a caixa de seleção desmarcada porém mostrando os campos que não deveriam ser mostrado. Após ela ser marcada a primeira vez, passa a funcionar corretamente mostrando os campos somente quando selecionada.
+![image](https://user-images.githubusercontent.com/107226804/224453742-06a400fd-7299-4da6-a767-d4d55199d5a1.png)
 
 
 
 Tela de consulta de Fornecedores com filtro. Apesar de não listar os fornecedores cadastrados o filtro funciona. Testei com valores fixos dentro do código e ele filtra de acordo com o digitado no campo de texto.
-![image](https://user-images.githubusercontent.com/107226804/224435055-bde1aeb1-efd8-4e0a-9e9c-cd085ce7fa1f.png)
+![image](https://user-images.githubusercontent.com/107226804/224453552-37509c03-07ed-4ff7-be4d-402bbb805635.png)
 
 
 
